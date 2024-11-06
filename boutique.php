@@ -128,9 +128,9 @@ while ($choix != 6) {
 
         if ($index >= 0 && $index < count($produit)) {
 
-            array_splice($produit, $index, 1);
-            array_splice($quantites, $index, 1);
-            array_splice($ventes, $index, 1);
+            unset($produits[$index]);
+            unset($quantites[$index]);
+            unset($ventes[$index]);
         } else {
             echo "introuvable! \n";
         }
